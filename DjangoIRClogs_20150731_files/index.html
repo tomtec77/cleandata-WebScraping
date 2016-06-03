@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- saved from url=(0108)chrome-extension://ghjblfcbcodgplpibgobicdakohgofid/pages/recommendation/index.html#/default?t=1457381477011 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Create new recommendation | Collokia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="chrome-extension://ghjblfcbcodgplpibgobicdakohgofid/jspm_packages/system.js"></script>
+    <script src="chrome-extension://ghjblfcbcodgplpibgobicdakohgofid/pages/recommendation/preconfig.js"></script>
+    <script src="chrome-extension://ghjblfcbcodgplpibgobicdakohgofid/config.js"></script>
+    <script src="chrome-extension://ghjblfcbcodgplpibgobicdakohgofid/pages/recommendation/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="chrome-extension://ghjblfcbcodgplpibgobicdakohgofid/css/common.css">
+    <link rel="stylesheet" type="text/css" href="chrome-extension://ghjblfcbcodgplpibgobicdakohgofid/jspm_packages/github/zurb/bower-foundation@5.5.3/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="chrome-extension://ghjblfcbcodgplpibgobicdakohgofid/vendor/quill/quill.base.css">
+    <link rel="stylesheet" type="text/css" href="chrome-extension://ghjblfcbcodgplpibgobicdakohgofid/vendor/quill/quill.snow.css">
+    <link rel="stylesheet" type="text/css" href="chrome-extension://ghjblfcbcodgplpibgobicdakohgofid/css/recommendation-inframe-editor.css">
+    <link rel="stylesheet" type="text/css" href="chrome-extension://ghjblfcbcodgplpibgobicdakohgofid/css/token-input-collokia.css">
+<link type="text/css" rel="stylesheet" href="chrome-extension://ghjblfcbcodgplpibgobicdakohgofid/jspm_packages/npm/font-awesome@4.4.0/css/font-awesome.css"><style type="text/css">body /deep/ .aurelia-hide { display:none !important; }</style><style type="text/css">ai-dialog-container,ai-dialog-overlay{position:fixed;top:0;right:0;bottom:0;left:0}ai-dialog-overlay{opacity:0}ai-dialog-overlay.active{opacity:1}ai-dialog-container{display:block;transition:opacity .2s linear;opacity:0;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;outline:0}ai-dialog-container.active{opacity:1}ai-dialog{position:relative;display:block;min-width:300px;box-shadow:0 5px 15px rgba(0,0,0,.5);border:1px solid rgba(0,0,0,.2);border-radius:5px;padding:0;width:-moz-fit-content;width:-webkit-fit-content;width:fit-content;height:-moz-fit-content;height:-webkit-fit-content;height:fit-content;margin:auto;border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;background:#fff}ai-dialog>ai-dialog-header{display:block;padding:16px;border-bottom:1px solid #e5e5e5}ai-dialog>ai-dialog-header>button{float:right;border:none;background:0 0;font-size:22px;position:relative;top:-4px;margin:0;padding:0;cursor:pointer}ai-dialog>ai-dialog-footer button:focus,ai-dialog>ai-dialog-header>button:focus{outline:0}ai-dialog>ai-dialog-body{display:block;padding:16px}ai-dialog>ai-dialog-footer{display:block;padding:6px;border-top:1px solid #e5e5e5;text-align:right}ai-dialog>ai-dialog-footer button{color:#333;background-color:#fff;padding:6px 12px;font-size:14px;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid #ccc;border-radius:4px;margin:5px 0 5px 5px}ai-dialog>ai-dialog-footer button:disabled{cursor:default;opacity:.45}ai-dialog>ai-dialog-footer button:hover:enabled{color:#333;background-color:#e6e6e6;border-color:#adadad}.ai-dialog-open{overflow:hidden}</style></head>
+<body aurelia-app="modules/recommendation/main"><!--<view>-->
+    <div class=" in-frame-editor-panel">
+        <router-view class="au-target" au-target-id="13"><!--<view>-->
+    
+    <!--<require from="modules/recommendation/rec-footer"></require>-->
+    <rec-header title.bind="title" actions.bind="actions" icon-title.bind="iconTitle" nav-next.call="navNext()" collapse.call="collapse()" class="au-target" au-target-id="26"><!--<view>-->
+    <div id="recommendation-header" class="row collapse">
+        <div class="columns small-6">
+            <h3>
+                <!--anchor-->
+                <!--<view>--><img src.bind="logo" alt="Collokia extension" class="au-target" au-target-id="16" src="chrome-extension://ghjblfcbcodgplpibgobicdakohgofid/icons/icon48.png"><!--</view>--><!--anchor-->
+                </h3>
+        </div>
+        <div class="columns small-6 small-text-right">
+            <!--anchor-->
+            <!--<a click.delegate="preview()" if.bind="hasPreview" class="button tiny secondary"> Preview </a>-->
+            <!--anchor-->
+            <!--anchor-->
+            <a click.delegate="collapse()" class="button tiny secondary au-target" au-target-id="25">
+                  <!--<i class="fa fa-times fa-lg"></i>-->
+                Hide
+            </a>
+        </div>
+    </div>
+<!--</view>--></rec-header>
+    <div class="row collapse">
+        <div class="column">
+            <div>
+
+                <h4>
+                    <a click.delegate="newTopic()" class="au-target" au-target-id="27"><i class="fa fa-sticky-note-o"></i> New recommendation</a>
+                </h4>
+            </div>
+            <div id="topic-recommendation">
+                <div>
+                    Create a message that will be shown on top of search results.
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row collapse">
+        <div class="column">
+            <div>
+                <h4>
+                    <a click.delegate="newLink()" class="au-target" au-target-id="28"><i class="fa fa-chain"></i> New links or pages annotation</a>
+                </h4>
+            </div>
+            <div id="link-recommendation">
+                <div>
+                    Create an message that will be shown as an icon next to the selected links or on the top of specific pages.
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!--anchor-->
+    <!--<rec-footer collapse.call="collapse()"></rec-footer>-->
+<!--</view>--></router-view>
+    </div>
+<!--</view>--></body></html>
